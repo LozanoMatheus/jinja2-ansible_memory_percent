@@ -1,0 +1,7 @@
+- name: Test
+  debug: msg={{ ansible_memtotal_mb * 0.8 }}
+
+- name: Calc RAM percent in jinja2
+  template:
+    src: mem_percent.j2
+    dest: /tmp/mem_percent.conf
